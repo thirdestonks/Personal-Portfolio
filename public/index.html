@@ -50,7 +50,7 @@
 
         <div class="headshot">
             <picture>
-                <img src="../images/profile-icon.png" alt="headshot">
+                <img src="/images/profile-icon.png" alt="headshot">
             </picture>
         </div>
 
@@ -192,7 +192,8 @@
             });
             /* Fetch Project Data */
 
-            fetch("/public/data/data.json")
+            // fetch("/public/data/data.json") For Local
+            fetch("/data/data.json") // For Production
                 .then(res => res.json())
                 .then(projects => {
                     const container = document.getElementById('projects-container');
