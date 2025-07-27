@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <title>Thirde Aguilera</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="left">
+                <a href="#about-section">Thirde Aguilera</a>
+            </div>
+            <div class="right">
+                <a href="#about-section">About</a>
+                <!--<a href="#experience-section">Experience</a>-->
+                <a href="#projects-section">Projects</a>
+                <a href="#skills-section">Skills</a>
+                <a href="#leave-message-section">Leave a message</a>
+            </div>
+            <button id="theme-toggle">
+                <span id="theme-text">Dark Mode</span>
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- SECTION 1: ABOUT-->
+    <section id="about-section">
+        <div class="home-content">
+            <h2>Nice to meet you — I'm <span>Thirde Aguilera</span></h2>
+            <h3>I'm a <span class="typing-text"></span><span class="cursor"></span></h3>
+        </div>
+
+        <div class="headshot">
+            <picture>
+                <img src="../images/profile-icon.png" alt="headshot">
+            </picture>
+        </div>
+
+
+        <div class="bio">
+            <p>
+                Hey! I'm <strong>Thirde Aguilera</strong>, a Junior Software Engineer that can do both Frontend and
+                Backend development.
+            </p>
+        </div>
+
+        <div class="social-links">
+            <h3>Socials</h3>
+            <a href="https://www.linkedin.com/in/thirde-aguilera-1224931b1/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/thirdestonks" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <!-- Download CV Button (Google Drive Link) -->
+        <div class="download-cv">
+            <a href="https://drive.google.com/uc?export=download&id=1g1wr4KCxkOXSPPwP_v_BJXdtdRr51CtQ" target="_blank"
+                rel="noopener">
+                <button class="btn-style">
+                    <i class="fa-solid fa-download"></i>
+                    Download My CV</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROJECTS-->
+    <div class="divider"></div>
+    <section id="projects-section">
+        <h2>Projects</h2>
+
+        <div class="projects-container">
+            <div class="projects-container" id="projects-container">
+                <!-- Project cards will be injected here -->
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- SECTION 3: SKILLS-->
+    <section id="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="devicon-typescript-plain"></i>
+            <i class="fa-brands fa-vuejs"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-node"></i>
+            <i class="fa-brands fa-docker"></i>
+            <i class="fa-brands fa-jira"></i>
+            <i class="fa-brands fa-linux"></i>
+            <i class="fa-brands fa-ubuntu"></i>
+            <i class="fa-brands fa-figma"></i>
+            <i class="fa-brands fa-git-alt"></i>
+            <i class="fa-brands fa-github-alt"></i>
+
+        </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- SECTION 4: MESSAGE-->
+    <section id="leave-message-section">
+        <h2>Leave a message :)</h2>
+
+        <div class="group">
+            <form id="comment-form" action="https://formspree.io/f/meoezpnq" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="30" rows="10" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="form-message"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Thirde Aguilera. All Rights. Reserved.</p>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const typingElement = document.querySelector(".typing-text");
+                const words = ["Software Developer", "Frontend Developer", "Backend Developer", "Full Stack Developer"];
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+
+                function typeEffect() {
+                    let currentWord = words[wordIndex];
+                    let displayText = isDeleting ?
+                        currentWord.substring(0, charIndex--) :
+                        currentWord.substring(0, charIndex++);
+
+                    typingElement.textContent = displayText;
+
+                    let typingSpeed = isDeleting ? 50 : 100;
+
+                    if (!isDeleting && charIndex === currentWord.length + 1) {
+                        typingSpeed = 2000; // Wait before deleting
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+                    }
+
+                    setTimeout(typeEffect, typingSpeed);
+                }
+
+                typeEffect();
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll("nav a").forEach(anchor => {
+                        anchor.addEventListener("click", function (event) {
+                            const targetId = this.getAttribute("href");
+                            if (targetId.startsWith("#")) {
+                                event.preventDefault(); // Prevent default jump
+                                document.querySelector(targetId)?.scrollIntoView({ behavior: "smooth" });
+                            }
+                        });
+                    });
+                });
+
+            });
+            /* Fetch Project Data */
+
+            fetch("/public/data/data.json")
+                .then(res => res.json())
+                .then(projects => {
+                    const container = document.getElementById('projects-container');
+                    projects.forEach((project, index) => {
+                        const html = `
+                        <div class="project-card">
+                            <div class="project-number">${project.number}</div>
+                            <div class="project-content">
+                                <div class="project-image">
+                                    <img src="${project.image}" alt="${project.alt}">
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">${project.title}</h3>
+                                    <p class="project-description">${project.description}</p>
+                                    <a href="${project.link}" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', html);
+                    });
+                })
+
+            const toggleButton = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            function updateThemeUI() {
+                if (body.classList.contains('dark-mode')) {
+                    toggleButton.innerHTML = '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>';
+                } else {
+                    toggleButton.innerHTML = '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>';
+                }
+            }
+
+            toggleButton.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+                updateThemeUI();
+            });
+
+            // Load user preference
+            if (localStorage.getItem('dark-mode') === 'enabled') {
+                body.classList.add('dark-mode');
+            }
+            updateThemeUI();
+
+            /*Interactive Project Box*/
+            document.querySelectorAll('.project-box').forEach(box => {
+                box.addEventListener('mouseover', () => {
+                    box.style.transform = 'scale(1.05)';
+                    box.style.transition = 'transform 0.3s ease';
+                });
+
+                box.addEventListener('mouseout', () => {
+                    box.style.transform = 'scale(1)';
+                });
+            });
+
+            /* message form */
+            const form = document.getElementById('comment-form');
+            const status = document.getElementById('form-message');
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                status.textContent = "Sending...";
+                status.style.color = "#6D7895";
+
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            status.textContent = "Message sent successfully!";
+                            status.style.color = "green";
+                            form.reset();
+                        } else {
+                            response.json().then(data => {
+                                if (data.errors) {
+                                    status.textContent = data.errors.map(error => error.message).join(", ");
+                                } else {
+                                    status.textContent = "Error sending message. Please try again.";
+                                }
+                                status.style.color = "red";
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        status.textContent = "Error sending message. Please try again.";
+                        status.style.color = "red";
+                        console.error("Form submission error:", error);
+                    });
+            });
+        </script>
+</body>
+
+</html>

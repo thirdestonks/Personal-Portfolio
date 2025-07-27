@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Memory Lane - Thirde Aguilera Portfolio</title>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html">Thirde Aguilera</a>
+            </div>
+            <div class="right">
+                <a href="index.html#about-section">About</a>
+                <a href="index.html#projects-section">Projects</a>
+                <a href="index.html#skills-section">Skills</a>
+                <a href="index.html#leave-message-section">Contact</a>
+            </div>
+            <button id="theme-toggle">
+                <span id="theme-text">Light Mode</span>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-header">
+            <h1>Memory Lane</h1>
+            <p class="project-subtitle">Media-sharing site with S3 storage, role-based access, and dynamic
+                customization.</p>
+        </div>
+        <div class="hero-image">
+            <img src="/images/memory-lane.png" alt="Memory Lane Project">
+        </div>
+        <!-- <a href="https://memory-lane.com/" target="_blank" class="project-link-button"> Not Up Yet
+            <i class="fa fa-camera-retro"></i>
+            Try It Out
+        </a> -->
+        <!--
+        <a href="https://github.com/Agneswei/Lunchatron" target="_blank" class="project-link-button">
+            <i class="fa-brands fa-github"></i>
+            View Code
+        </a>
+        -->
+    </section>
+
+
+    <!-- Process Highlights Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h3>PROCESS</h3>
+            <h2>How I Built It</h2>
+        </div>
+        <div class="process-details">
+            <div class="detail-column">
+                <h3>Timeline</h3>
+                <p>Dec 2024 - Current</p>
+            </div>
+
+            <div class="detail-column">
+                <h3>Disciplines</h3>
+                <p>User Experience Design<br>
+                    User Interface Design<br>
+                    UI/UX design<br>
+                    Full-Stack Development</p>
+            </div>
+
+            <div class="detail-column">
+                <h3>Tools</h3>
+                <p>Jira<br>
+                    BackBlaze B2
+                </p>
+            </div>
+
+            <div class="detail-column">
+                <h3>Tech Stack</h3>
+                <p>Nuxt3<br>
+                    NestJS<br>
+                    Tailwind CSS<br>
+                    Vuetify<br>
+                    PostgreSQL<br>
+                    JWT
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Background Section -->
+    <section class="background-section">
+        <div class="section-header">
+            <h3>BACKGROUND</h3>
+            <h2>The Why</h2>
+        </div>
+
+        <div class="background-content">
+            <p>Memory Lane started as a personal passion project — a simple platform where I could store and manage my
+                own images and videos, while practicing S3-compatible storage integration using Backblaze B2.</p>
+            <p>What began as a backend-focused experiment turned into a full-stack web app built with NestJS and Nuxt 3.
+                The goal was to deepen my knowledge of NestJS while learning how to handle file uploads, access control,
+                and cloud storage at a practical level.</p>
+            <p>Initially built for my own use, I later saw its potential for others. That’s when I started designing it
+                with customization in mind — dynamic configuration, role-based access, and a scalable structure that
+                could serve more users in the future.</p>
+        </div>
+
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="features-section">
+        <div class="section-header">
+            <h3>FEATURES</h3>
+            <h2>Key Functionality</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>S3 Compatible</h3>
+                <p>Seamlessly integrates with S3 storage for easy media management</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-qrcode"></i>
+                <h3>QR Code Sharing</h3>
+                <p>Share your media easily with QR codes <br><b>(coming soon)</b></br></p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Fully Responsive Design</h3>
+                <p>Works smoothly on all devices</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-cog"></i>
+                <h3>Dynamic Configuration</h3>
+                <p>Whole Site is Customizable <br><b>(coming soon)</b></br></p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>© 2025 Thirde Aguilera. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        function updateThemeUI() {
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.innerHTML = '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>';
+            } else {
+                toggleButton.innerHTML = '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>';
+            }
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+            updateThemeUI();
+        });
+
+        // Load user preference
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            body.classList.add('dark-mode');
+        } else if (localStorage.getItem('dark-mode') === 'disabled') {
+            body.classList.remove('dark-mode');
+        }
+
+        updateThemeUI();
+    </script>
+</body>
+
+</html>

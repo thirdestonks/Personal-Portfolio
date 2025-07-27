@@ -1,0 +1,10 @@
+[
+  {
+    "number": "01 | FULL-STACK ENGINEER - PERSONAL PROJECT",
+    "image": "/images/memory-lane.png",
+    "alt": "Memory Lane",
+    "title": "Memory Lane",
+    "description": "A web-based photobooth experience with customizable filters and unique frames.",
+    "link": "memorylane.html"
+  }
+]
