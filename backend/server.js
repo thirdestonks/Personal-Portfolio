@@ -60,5 +60,5 @@ ${message}
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
+  console.log(`🚀 Server is running, Ready to fire Emails!`);
 });

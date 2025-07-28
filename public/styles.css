@@ -27,43 +27,186 @@ a {
     text-decoration: none;
 }
 
+/* ======= NAVBAR ======= */
 nav {
-    background-color: #6D7895;
-    display: flex;
-    justify-content: space-between;
+  background-color: #6D7895;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* === LEFT (Hamburger) === */
+.left {
+  display: flex;
+  align-items: center;
+}
+
+#hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* === BRAND === */
+#brand-name {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.brand-full {
+  display: inline;
+}
+.brand-short {
+  display: none;
+}
+
+/* === RIGHT LINKS (Desktop Only) === */
+.right {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.right a {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.right a:hover {
+  color: var(--link-color);
+  transition: color 0.3s ease-in-out;
+}
+
+/* === TOGGLE === */
+.toggle {
+  margin-left: 1rem;
+}
+
+#theme-toggle {
+  font-weight: 500;
+}
+
+/* ======= NAV DROPDOWN (Mobile Fullscreen Overlay) ======= */
+.nav-dropdown {
+  display: none;
+  flex-direction: column;
+  justify-content: center;             /* Center vertically */
+  align-items: center;                 /* Center horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;                       /* Full screen height */
+  background-color: #6D7895;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  z-index: 999;
+  animation: fadeSlide 0.3s ease-out;
+}
+
+.nav-dropdown.active {
+  display: flex;
+}
+
+.nav-dropdown a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px; /* rounded for highlight area */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.08); /* subtle highlight */
+  color: var(--link-color); /* or keep as var(--text-color) */
+}
+
+
+/* Optional: prevent scrolling when nav is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= MOBILE VIEW ======= */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    padding: 0 3.125rem;
-    height: 5rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+    padding-bottom: 0;
+    height: auto;
+    position: relative;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .brand-full {
+    display: none;
+  }
+
+  .brand-short {
+    display: inline;
+  }
+
+  #brand-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .toggle {
+    order: 2;
+    margin-left: auto;
+  }
 }
 
-
-nav .left a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between links and toggle */
-}
-
-nav .right a {
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0.625rem;
-}
-
-nav .right a:hover {
-    color: var(--link-color);
-    transition: color 0.3s ease-in-out;
+/* === Dropdown Animation === */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -204,6 +347,10 @@ section h2::after {
     color: #9ec1a3;
 }
 
+.dark-mode #brand-name {
+  color: #9ec1a3;
+}
+
 .dark-mode input, .dark-mode textarea {
     background-color: #333;
     color: white;
@@ -224,6 +371,10 @@ section h2::after {
 
 .dark-mode .typing-text {
     color: #999;
+}
+
+.dark-mode .skill-label {
+    color: #9ec1a3;
 }
 
 .dark-mode button {
@@ -1059,6 +1210,36 @@ body:not(.dark-mode) .project-link-button:hover {
     margin: 1rem 0; /* Add margin to ensure proper spacing */
 }
 
+/* Wrap each skill */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+    position: relative;
+    cursor: default;
+}
+
+.skill-label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.skill:hover i {
+    color: #1e90ff; /* Change this to your highlight color or use specific brand color via classes */
+    transform: scale(1.1);
+}
+
+.skill:hover .skill-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Leave a Message Section */
 #leave-message-section {
@@ -1091,6 +1272,23 @@ body:not(.dark-mode) .project-link-button:hover {
     width: 100%;
     margin: 0 auto;
 }
+
+.contact-note {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-note a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-note a:hover {
+  text-decoration: underline;
+}
+
 
 footer {
     background-color: #6D7895;
