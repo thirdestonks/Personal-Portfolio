@@ -21,21 +21,39 @@
 <body class="dark-mode">
     <header>
         <nav>
+            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
+
             <div class="left">
-                <a href="index.html">Thirde Aguilera</a>
+                <a id="brand-name" href="index.html#about-section">
+                    <span class="brand-full">Thirde Aguilera</span>
+                    <span class="brand-short">T.A</span>
+                </a>
             </div>
-            <div class="right">
+
+            <div class="right desktop-only">
                 <a href="index.html#about-section">About</a>
                 <a href="index.html#projects-section">Projects</a>
                 <a href="index.html#skills-section">Skills</a>
                 <a href="index.html#leave-message-section">Contact</a>
             </div>
-            <button id="theme-toggle">
-                <span id="theme-text">Light Mode</span>
-                <i class="fa-solid fa-sun"></i>
-            </button>
+
+            <div class="toggle">
+                <button id="theme-toggle">
+                    <span id="theme-text">Light Mode</span>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
         </nav>
+
     </header>
+    <!-- For Hamburger menu -->
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <a href="index.html#about-section">About</a>
+        <a href="index.html#projects-section">Projects</a>
+        <a href="index.html#skills-section">Skills</a>
+        <a href="index.html#leave-message-section">Contact</a>
+    </nav>
+
 
     <!-- Project Hero Section -->
     <section class="project-hero">
@@ -177,6 +195,25 @@
             body.classList.toggle('dark-mode');
             localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
             updateThemeUI();
+        });
+
+        /* Hamburger Menu */
+        const hamburger = document.getElementById('hamburger');
+        const navDropdown = document.getElementById('nav-dropdown');
+        const classBody = document.body;
+
+        // Toggle on hamburger click
+        hamburger.addEventListener('click', () => {
+            navDropdown.classList.toggle('active');
+            classBody.classList.toggle('no-scroll');
+        });
+
+        // ✅ Auto-close dropdown when a nav link is clicked
+        navDropdown.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navDropdown.classList.remove('active');
+                classBody.classList.remove('no-scroll');
+            });
         });
 
         // Load user preference
