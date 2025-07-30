@@ -109,69 +109,108 @@
     </section>
     <div class="divider"></div>
 
-    <!-- SECTION 3: SKILLS-->
+    <!-- SECTION 3: SKILLS -->
     <section id="skills-section">
         <h2>Skills</h2>
+
+        <!-- Category Tabs -->
+        <div class="skill-tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="frontend">Frontend</button>
+            <button class="tab" data-filter="backend">Backend</button>
+            <button class="tab" data-filter="version">Version Control</button>
+            <button class="tab" data-filter="deploy">Deployment</button>
+            <button class="tab" data-filter="tools">Other Tools</button>
+        </div>
+        <div id="skill-loader" class="loader-wrapper hidden">
+            <span class="loader"></span>
+        </div>
+
+        <!-- Skills Container -->
         <div class="skills-container">
-            <div class="skill">
-                <i class="fa-brands fa-html5"></i>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/HTML5.svg" alt="HTML5" class="skill-icon" />
                 <span class="skill-label">HTML5</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-css3-alt"></i>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/CSS3.svg" alt="CSS3" class="skill-icon" />
                 <span class="skill-label">CSS3</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-js"></i>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/JavaScript.svg" alt="JavaScript" class="skill-icon" />
                 <span class="skill-label">JavaScript</span>
             </div>
-            <div class="skill">
-                <i class="devicon-typescript-plain"></i>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/TypeScript.svg" alt="TypeScript" class="skill-icon" />
                 <span class="skill-label">TypeScript</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-vuejs"></i>
+            <div class="skill" data-category="backend">
+                <img src="./assets/icons/PHP.svg" alt="PHP" class="skill-icon" />
+                <span class="skill-label">PHP</span>
+            </div>
+            <div class="skill" data-category="backend">
+                <img src="./assets/icons/Laravel.svg" alt="Laravel" class="skill-icon" />
+                <span class="skill-label">Laravel</span>
+            </div>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/Vue.js.svg" alt="Vue" class="skill-icon" />
                 <span class="skill-label">Vue</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-react"></i>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/Nuxt JS.svg" alt="Nuxt.js" class="skill-icon" />
+                <span class="skill-label">Nuxt.js</span>
+            </div>
+            <div class="skill" data-category="frontend">
+                <img src="./assets/icons/React.svg" alt="React" class="skill-icon" />
                 <span class="skill-label">React</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-node-js"></i>
+            <div class="skill" data-category="backend">
+                <img src="./assets/icons/Node.js.svg" alt="Node.js" class="skill-icon" />
                 <span class="skill-label">Node.js</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-figma"></i>
+            <div class="skill" data-category="backend">
+                <img src="./assets/icons/Nest.js.svg" alt="Nest.js" class="skill-icon" />
+                <span class="skill-label">Nest.js</span>
+            </div>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/Figma.svg" alt="Figma" class="skill-icon" />
                 <span class="skill-label">Figma</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-jira"></i>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/Jira.svg" alt="Jira" class="skill-icon" />
                 <span class="skill-label">Jira</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-linux"></i>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/Linux.svg" alt="Linux" class="skill-icon" />
                 <span class="skill-label">Linux</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-ubuntu"></i>
-                <span class="skill-label">Ubuntu</span>
-            </div>
-            <div class="skill">
-                <i class="fa-brands fa-docker"></i>
+            <div class="skill" data-category="deploy">
+                <img src="./assets/icons/Docker.svg" alt="Docker" class="skill-icon" />
                 <span class="skill-label">Docker</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-git-alt"></i>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/Postman.svg" alt="Postman" class="skill-icon" />
+                <span class="skill-label">Postman</span>
+            </div>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/Insomnia.svg" alt="Insomnia" class="skill-icon" />
+                <span class="skill-label">Insomnia</span>
+            </div>
+            <div class="skill" data-category="tools">
+                <img src="./assets/icons/RabbitMQ.svg" alt="RabbitMQ" class="skill-icon" />
+                <span class="skill-label">RabbitMQ</span>
+            </div>
+            <div class="skill" data-category="version">
+                <img src="./assets/icons/Git.svg" alt="Git" class="skill-icon" />
                 <span class="skill-label">Git</span>
             </div>
-            <div class="skill">
-                <i class="fa-brands fa-github-alt"></i>
+            <div class="skill" data-category="version">
+                <img src="./assets/icons/GitHub.svg" alt="GitHub" class="skill-icon" />
                 <span class="skill-label">GitHub</span>
             </div>
         </div>
-
     </section>
+
     <div class="divider"></div>
 
     <!-- SECTION 4: MESSAGE-->
@@ -262,7 +301,6 @@
                 classBody.classList.toggle('no-scroll');
             });
 
-            // ✅ Auto-close dropdown when a nav link is clicked
             navDropdown.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     navDropdown.classList.remove('active');
@@ -270,6 +308,73 @@
                 });
             });
 
+            /* Skills Section Tabs */
+            const tabs = document.querySelectorAll('.tab');
+            const skills = document.querySelectorAll('.skill');
+            const loader = document.getElementById('skill-loader');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const filter = tab.getAttribute('data-filter');
+
+                    // 🔄 Highlight active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // 🔁 Reset loader animation
+                    const loaderBar = loader.querySelector('.loader');
+                    loaderBar.classList.remove('loader');
+                    void loaderBar.offsetWidth; // force reflow
+                    loaderBar.classList.add('loader');
+
+                    // 🌀 Show loader overlay
+                    loader.classList.remove('hidden', 'hide');
+                    requestAnimationFrame(() => {
+                        loader.classList.add('show');
+                    });
+
+                    // ⚙️ Delay before filtering
+                    setTimeout(() => {
+                        let delay = 0;
+
+                        // 🔻 Fade out and hide unmatched skills
+                        skills.forEach(skill => {
+                            const category = skill.getAttribute('data-category');
+                            const shouldShow = filter === 'all' || category === filter;
+
+                            if (!shouldShow) {
+                                skill.style.display = 'none';
+                                skill.classList.remove('fade-in');
+                                skill.classList.add('fade-out');
+                            }
+                        });
+
+                        // 🔺 Fade in and show matched skills (with stagger)
+                        skills.forEach(skill => {
+                            const category = skill.getAttribute('data-category');
+                            const shouldShow = filter === 'all' || category === filter;
+
+                            if (shouldShow) {
+                                setTimeout(() => {
+                                    skill.style.display = 'flex';
+                                    skill.classList.remove('fade-out');
+                                    skill.classList.add('fade-in');
+                                    void skill.offsetWidth; // force reflow
+                                    skill.style.opacity = '1';
+                                    skill.style.transform = 'scale(1)';
+                                }, delay + 50);
+                                delay += 75;
+                            }
+                        });
+
+                        // ✅ Hide loader after 1s
+                        setTimeout(() => {
+                            loader.classList.remove('show');
+                            loader.classList.add('hide'); // fade out
+                        }, 1000);
+                    }, 100);
+                });
+            });
             /* Fetch Project Data */
 
             // fetch("/public/data/data.json") For Local
