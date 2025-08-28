@@ -6,5 +6,22 @@
     "title": "Memory Lane",
     "description": "A web-based photobooth experience with customizable filters and unique frames.",
     "link": "memorylane.html"
+  },
+  {
+    "number": "02 | FULL-STACK ENGINEER - SMART CAMPUS (COMPANY USE ONLY)",
+    "image": "/images/company-use.png",
+    "alt": "Smart Campus",
+    "title": "Smart Campus",
+    "description": "A large-scale Smart Campus platform comprising 20+ modules such as Admission, Library, Registrar, Cashier, and Accounting. Built with Nuxt and Laravel, with NestJS powering real-time features. Designed as a dynamic system tailored for marine schools.",
+    "link": "index.html"
+  },
+  {
+    "number": "03 | FULL-STACK ENGINEER - DYNAMIC ENROLLMENT SYSTEM (COMPANY USE ONLY)",
+    "image": "/images/company-use.png",
+    "alt": "Dynamic Enrollment System",
+    "title": "Dynamic Enrollment System",
+    "description": "A highly configurable enrollment system designed for schools and academies. Features include a payment gateway integration, dynamic email notifications, and flexible workflows that adapt to various academic requirements.",
+    "link": "index.html"
   }
+
 ]
