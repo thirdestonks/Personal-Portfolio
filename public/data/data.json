@@ -12,7 +12,7 @@
     "image": "/images/company-use.png",
     "alt": "Smart Campus",
     "title": "Smart Campus",
-    "description": "A large-scale Smart Campus platform comprising 20+ modules such as Admission, Library, Registrar, Cashier, and Accounting. Built with Nuxt and Laravel, with NestJS powering real-time features. Designed as a dynamic system tailored for marine schools.",
+    "description": "A large-scale campus management system with 20+ modules, built to modernize marine schools.",
     "link": "smartcampus.html"
   },
   {
