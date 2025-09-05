@@ -1,64 +1,55 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-require('dotenv').config(); // load env
+import express from 'express'
+import cors from 'cors'
+import bodyParser from 'body-parser'
+import dotenv from 'dotenv'
+import { Resend } from 'resend'
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+dotenv.config()
+
+const app = express()
+const PORT = process.env.PORT || 5000
 
 // Middlewares
-app.use(cors({ origin: true, methods: ['GET', 'POST'] }));
-app.use(bodyParser.json());
+app.use(cors({ origin: true, methods: ['GET', 'POST'] }))
+app.use(bodyParser.json())
+app.use(express.static('public'))
 
-app.use(express.static('public'));
+const resend = new Resend(process.env.RESEND_KEY)
 
-// Email endpoint
-app.post('/send', (req, res) => {
-  const { name, email, message } = req.body;
+app.post('/send', async (req, res) => {
+  const { name, email, message } = req.body
 
   // Validation
   if (!name || !email || !message) {
-    return res.status(400).json({ message: 'All fields are required.' });
+    return res.status(400).json({ message: 'All fields are required.' })
   }
 
-  // Nodemailer transporter
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
-    }
-  });
+  try {
+    await resend.emails.send({
+      from: 'Portfolio Mail - <onboarding@resend.dev>',
+      to: process.env.GMAIL_USER,
+      reply_to: email,
+      subject: `New message from ${name}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    })
+    //Logs
+    console.log(`Email from: ${name} <${email}>`)
+    console.log(`Message: ${message}`)
 
-  // Email content
-  const mailOptions = {
-    from: process.env.GMAIL_USER,
-    to: process.env.GMAIL_USER,
-    replyTo: email,
-    subject: `New Message from ${name}`,
-    text: `
-Name: ${name}
-Email: ${email}
+    res.status(200).json({ message: 'Email sent successfully.' })
+  } catch (err) {
+    console.error('❌ Email failed:', err)
+    res
+      .status(500)
+      .json({ message: 'Failed to send email.', error: err.message })
+  }
+})
 
-Message:
-${message}
-    `
-  };
-
-  // Send the email
-  transporter.sendMail(mailOptions, (err, info) => {
-    if (err) {
-      console.error('Email failed:', err);
-      return res.status(500).json({ message: 'Failed to send email.', error: err.message });
-    }
-
-    console.log('Email sent:', info.response);
-    return res.status(200).json({ message: 'Email sent successfully.' });
-  });
-});
-
-// Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running, Ready to fire Emails!`);
-});
+  console.log(`🚀 Server is running on port ${PORT}`)
+})
