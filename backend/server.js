@@ -58,5 +58,15 @@
 // app.listen(PORT, () => {
 //   console.log(`🚀 Server is running on port ${PORT}`)
 // })
-console.log("Backend disabled. Portfolio is static. Using Formspree for emails.");
+import express from "express";
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Serve your static files
+app.use(express.static("public"));
+
+app.listen(PORT, () => {
+  console.log(`🚀 Static portfolio server running on port ${PORT}`);
+});
 
