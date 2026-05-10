@@ -827,7 +827,7 @@
       /* Fetch Project Data */
 
       // fetch("/public/data/data.json") For Local
-      fetch('/public/data/data.json') // For Production
+      fetch('/data/data.json') // For Production
         .then((res) => res.json())
         .then((projects) => {
           const container = document.getElementById('projects-container')
