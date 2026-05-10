@@ -37,7 +37,7 @@
     <title>Thirde Aguilera</title>
   </head>
 
-  <body>
+  <body class="dark-mode">
     <!-- DESIGN -->
 
     <!-- TERMINAL FX -->
@@ -48,7 +48,8 @@
     <header>
       <nav>
         <!-- MOBILE -->
-        <button id="hamburger">☰</button>
+        <!-- to be fixed -->
+        <button disabled id="hamburger">☰</button>
 
         <!-- BRAND -->
         <div class="left">
@@ -852,31 +853,37 @@
         })
 
       const toggleButton = document.getElementById('theme-toggle')
+      console.log(toggleButton)
       const body = document.body
 
       function updateThemeUI() {
         if (body.classList.contains('dark-mode')) {
           toggleButton.innerHTML =
-            '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>'
+            '<span id="theme-text">WORKSPACE</span> <i class="fa-solid fa-code"></i>'
         } else {
           toggleButton.innerHTML =
-            '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>'
+            '<span id="theme-text">TERMINAL</span> <i class="fa-solid fa-terminal"></i>'
         }
       }
 
       toggleButton.addEventListener('click', () => {
         body.classList.toggle('dark-mode')
+
         localStorage.setItem(
           'dark-mode',
           body.classList.contains('dark-mode') ? 'enabled' : 'disabled',
         )
+
         updateThemeUI()
       })
 
-      // Load user preference
-      if (localStorage.getItem('dark-mode') === 'enabled') {
+      /* LOAD SAVED THEME */
+      if (localStorage.getItem('dark-mode') === 'disabled') {
+        body.classList.remove('dark-mode')
+      } else {
         body.classList.add('dark-mode')
       }
+
       updateThemeUI()
 
       /*Interactive Project Box*/
