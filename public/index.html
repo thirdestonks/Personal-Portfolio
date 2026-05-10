@@ -1,389 +1,839 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css?v=2.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css?v=2.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
     <title>Thirde Aguilera</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- DESIGN -->
+
+    <!-- TERMINAL FX -->
+    <div class="noise"></div>
+    <div class="scanline"></div>
+
+    <!-- HEADER -->
     <header>
-        <nav>
-            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
+      <nav>
+        <!-- MOBILE -->
+        <button id="hamburger">☰</button>
 
-            <div class="left">
-                <a id="brand-name" href="#about-section">
-                    <span class="brand-full">Thirde Aguilera</span>
-                    <span class="brand-short">T.A</span>
-                </a>
-            </div>
-            <div class="right desktop-only">
-                <a href="#about-section">About</a>
-                <!--<a href="#experience-section">Experience</a>-->
-                <a href="#projects-section">Projects</a>
-                <a href="#skills-section">Skills</a>
-                <a href="#leave-message-section">Leave a message</a>
-            </div>
-            <div class="toggle">
-                <button id="theme-toggle">
-                    <span id="theme-text">Dark Mode</span>
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </div>
-        </nav>
+        <!-- BRAND -->
+        <div class="left">
+          <a id="brand-name" href="#about-section">
+            <span class="brand-full">thirde@portfolio:~$</span>
+
+            <span class="brand-short">t3</span>
+          </a>
+        </div>
+
+        <!-- NAV LINKS -->
+        <div class="right desktop-only">
+          <a href="#about-section">./about</a>
+
+          <a href="#projects-section">./projects</a>
+
+          <a href="#skills-section">./skills</a>
+
+          <a href="#leave-message-section">./contact</a>
+        </div>
+
+        <!-- THEME -->
+        <div class="toggle">
+          <button id="theme-toggle">
+            <span id="theme-text">SYS_THEME</span>
+
+            <i class="fa-solid fa-terminal"></i>
+          </button>
+        </div>
+      </nav>
     </header>
-    <!-- For Hamburger menu -->
+
+    <!-- MOBILE NAV -->
     <nav class="nav-dropdown" id="nav-dropdown">
-        <a href="#about-section">About</a>
-        <a href="#projects-section">Projects</a>
-        <a href="#skills-section">Skills</a>
-        <a href="#leave-message-section">Leave a message</a>
+      <a href="#about-section">./about</a>
+
+      <a href="#projects-section">./projects</a>
+
+      <a href="#skills-section">./skills</a>
+
+      <a href="#leave-message-section">./contact</a>
     </nav>
 
-    <!-- SECTION 1: ABOUT-->
+    <!-- HERO -->
     <section id="about-section">
-        <div class="home-content">
-            <h2>Nice to meet you — I'm <span>Thirde Aguilera</span></h2>
-            <h3>I'm a <span class="typing-text"></span><span class="cursor"></span></h3>
-        </div>
+      <div class="terminal-path">> boot --user=thirde</div>
 
-        <div class="headshot">
-            <picture>
-                <img src="./images/profile-icon.png" alt="headshot">
-            </picture>
-        </div>
+      <div class="hero-layout">
+        <!-- LEFT -->
+        <div class="hero-left">
+          <h1>
+            THIRDE
+            <br />
+            AGUILERA
+          </h1>
 
+          <div class="hero-role">
+            <span>> ROLE :</span>
 
-        <div class="bio">
+            <span class="typing-text"></span>
+            <span class="cursor"></span>
+          </div>
+
+          <div class="hero-meta">
+            <p>> LOC : Manila, PH</p>
+
             <p>
-                Hey! I'm <strong>Thirde Aguilera</strong>, a Junior Software Engineer that can do both Frontend and
-                Backend development.
+              > STATUS :
+              <span>[ ONLINE ]</span>
             </p>
-        </div>
+          </div>
 
-        <div class="social-links">
-            <h3>Socials</h3>
-            <a href="https://www.linkedin.com/in/thirde-aguilera-1224931b1/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
+          <!-- ACTION BUTTONS -->
+          <div class="terminal-actions">
+            <a href="#leave-message-section" class="terminal-btn">
+              [ CONTACT.EXE ]
             </a>
+
+            <a href="#projects-section" class="terminal-btn">[ VIEW WORK ]</a>
+          </div>
+
+          <!-- LINKS -->
+          <div class="terminal-links">
+            <a
+              href="https://www.linkedin.com/in/thirde-aguilera-1224931b1/"
+              target="_blank"
+            >
+              > open linkedin
+            </a>
+
             <a href="https://github.com/thirdestonks" target="_blank">
-                <i class="fa-brands fa-github"></i>
+              > open github
             </a>
-        </div>
-        <!-- Download CV Button (Google Drive Link) -->
-        <div class="download-cv">
-            <a href="https://drive.google.com/uc?export=download&id=1g1wr4KCxkOXSPPwP_v_BJXdtdRr51CtQ" target="_blank"
-                rel="noopener">
-                <button class="btn-style">
-                    <i class="fa-solid fa-download"></i>
-                    Download My CV</button>
+
+            <a
+              href="https://drive.google.com/uc?export=download&id=1g1wr4KCxkOXSPPwP_v_BJXdtdRr51CtQ"
+              target="_blank"
+              rel="noopener"
+            >
+              > download resume.pdf
             </a>
+          </div>
         </div>
-    </section>
 
-    <!-- SECTION 2: PROJECTS-->
-    <div class="divider"></div>
-    <section id="projects-section">
-        <h2>Projects</h2>
+        <!-- RIGHT -->
+        <div class="hero-right">
+          <div class="profile-frame">
+            <div class="profile-top">
+              <span>ID_0xT3</span>
 
-        <div class="projects-container">
-            <div class="projects-container" id="projects-container">
-                <!-- Project cards will be injected here -->
+              <span>REC ●</span>
             </div>
-        </div>
-        </div>
-    </section>
-    <div class="divider"></div>
 
-    <!-- SECTION 3: SKILLS -->
+            <img src="./images/profile-icon.png" alt="profile" />
+
+            <div class="profile-bottom">
+              <span>./profile.jpg</span>
+
+              <span>ONLINE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about-terminal-section">
+      <div class="section-terminal-title">> ~/thirde/about.md</div>
+
+      <div class="about-terminal-layout">
+        <!-- LEFT -->
+        <div class="about-terminal-content">
+          <div class="about-terminal-window">
+            <div class="about-window-top">
+              <span>about.md</span>
+
+              <span>READ ONLY</span>
+            </div>
+
+            <div class="about-window-body">
+              <p>
+                Software engineer based in Manila. Dean’s Lister graduate from
+                Universidad de Manila (BTVTE, Computer Programming Technology).
+              </p>
+
+              <p>
+                Started shipping frontend code in 2023 and later expanded into
+                backend systems and full-stack engineering.
+              </p>
+
+              <p>
+                Currently serving as Computer Programmer II at TESDA, building
+                digital infrastructure that supports technical education across
+                the Philippines.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="about-terminal-meta">
+          <div class="meta-card">
+            <div class="meta-card-top">
+              <span>system.info</span>
+
+              <span>ACTIVE</span>
+            </div>
+
+            <div class="meta-row">
+              <span>ROLE</span>
+
+              <span>SOFTWARE ENGINEER</span>
+            </div>
+
+            <div class="meta-row">
+              <span>FOCUS</span>
+
+              <span>FULL STACK</span>
+            </div>
+
+            <div class="meta-row">
+              <span>LOCATION</span>
+
+              <span>MANILA, PH</span>
+            </div>
+
+            <div class="meta-row">
+              <span>COMPANY</span>
+
+              <span>TESDA</span>
+            </div>
+
+            <div class="meta-row">
+              <span>STATUS</span>
+
+              <span class="status-live">ONLINE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
     <section id="skills-section">
-        <h2>Skills</h2>
+      <div class="section-terminal-title">> ~/thirde/skills.json</div>
 
-        <!-- Category Tabs -->
-        <div class="skill-tabs">
-            <button class="tab active" data-filter="all">All</button>
-            <button class="tab" data-filter="frontend">Frontend</button>
-            <button class="tab" data-filter="backend">Backend</button>
-            <button class="tab" data-filter="version">Version Control</button>
-            <button class="tab" data-filter="deploy">Deployment</button>
-            <button class="tab" data-filter="tools">Other Tools</button>
-        </div>
-        <div id="skill-loader" class="loader-wrapper hidden">
-            <span class="loader"></span>
+      <!-- RUNTIME INFO -->
+      <div class="skills-runtime">
+        <div class="runtime-row">
+          <span>STACK STATUS</span>
+
+          <span>ACTIVE</span>
         </div>
 
-        <!-- Skills Container -->
-        <div class="skills-container">
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/HTML5.svg" alt="HTML5" class="skill-icon" />
-                <span class="skill-label">HTML5</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/CSS3.svg" alt="CSS3" class="skill-icon" />
-                <span class="skill-label">CSS3</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/JavaScript.svg" alt="JavaScript" class="skill-icon" />
-                <span class="skill-label">JavaScript</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/TypeScript.svg" alt="TypeScript" class="skill-icon" />
-                <span class="skill-label">TypeScript</span>
-            </div>
-            <div class="skill" data-category="backend">
-                <img src="./assets/icons/PHP.svg" alt="PHP" class="skill-icon" />
-                <span class="skill-label">PHP</span>
-            </div>
-            <div class="skill" data-category="backend">
-                <img src="./assets/icons/Laravel.svg" alt="Laravel" class="skill-icon" />
-                <span class="skill-label">Laravel</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/Vue.js.svg" alt="Vue" class="skill-icon" />
-                <span class="skill-label">Vue</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/Nuxt JS.svg" alt="Nuxt.js" class="skill-icon" />
-                <span class="skill-label">Nuxt.js</span>
-            </div>
-            <div class="skill" data-category="frontend">
-                <img src="./assets/icons/React.svg" alt="React" class="skill-icon" />
-                <span class="skill-label">React</span>
-            </div>
-            <div class="skill" data-category="backend">
-                <img src="./assets/icons/Node.js.svg" alt="Node.js" class="skill-icon" />
-                <span class="skill-label">Node.js</span>
-            </div>
-            <div class="skill" data-category="backend">
-                <img src="./assets/icons/Nest.js.svg" alt="Nest.js" class="skill-icon" />
-                <span class="skill-label">Nest.js</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/Figma.svg" alt="Figma" class="skill-icon" />
-                <span class="skill-label">Figma</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/Jira.svg" alt="Jira" class="skill-icon" />
-                <span class="skill-label">Jira</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/Linux.svg" alt="Linux" class="skill-icon" />
-                <span class="skill-label">Linux</span>
-            </div>
-            <div class="skill" data-category="deploy">
-                <img src="./assets/icons/Docker.svg" alt="Docker" class="skill-icon" />
-                <span class="skill-label">Docker</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/Postman.svg" alt="Postman" class="skill-icon" />
-                <span class="skill-label">Postman</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/Insomnia.svg" alt="Insomnia" class="skill-icon" />
-                <span class="skill-label">Insomnia</span>
-            </div>
-            <div class="skill" data-category="tools">
-                <img src="./assets/icons/RabbitMQ.svg" alt="RabbitMQ" class="skill-icon" />
-                <span class="skill-label">RabbitMQ</span>
-            </div>
-            <div class="skill" data-category="version">
-                <img src="./assets/icons/Git.svg" alt="Git" class="skill-icon" />
-                <span class="skill-label">Git</span>
-            </div>
-            <div class="skill" data-category="version">
-                <img src="./assets/icons/GitHub.svg" alt="GitHub" class="skill-icon" />
-                <span class="skill-label">GitHub</span>
-            </div>
+        <div class="runtime-row">
+          <span>PRIMARY FOCUS</span>
+
+          <span>FULL STACK ENGINEERING</span>
         </div>
+
+        <div class="runtime-row">
+          <span>MAIN ECOSYSTEM</span>
+
+          <span>LARAVEL + VUE</span>
+        </div>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="skill-tabs">
+        <button class="tab active" data-filter="all">[ ALL ]</button>
+
+        <button class="tab" data-filter="frontend">[ FRONTEND ]</button>
+
+        <button class="tab" data-filter="backend">[ BACKEND ]</button>
+
+        <button class="tab" data-filter="tools">[ TOOLS ]</button>
+
+        <button class="tab" data-filter="deploy">[ DEPLOY ]</button>
+
+        <button class="tab" data-filter="version">[ VERSION ]</button>
+      </div>
+
+      <!-- LOADER -->
+      <div id="skill-loader" class="hidden">
+        <div class="loader"></div>
+      </div>
+
+      <!-- SKILLS GRID -->
+      <div class="skills-container">
+        <!-- FRONTEND -->
+        <div class="skill" data-category="frontend">
+          <img src="./assets/icons/HTML5.svg" alt="HTML5" class="skill-icon" />
+
+          <span class="skill-label">HTML5</span>
+
+          <small>markup</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img src="./assets/icons/CSS3.svg" alt="CSS3" class="skill-icon" />
+
+          <span class="skill-label">CSS3</span>
+
+          <small>styling</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img
+            src="./assets/icons/JavaScript.svg"
+            alt="JavaScript"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">JavaScript</span>
+
+          <small>runtime</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img
+            src="./assets/icons/TypeScript.svg"
+            alt="TypeScript"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">TypeScript</span>
+
+          <small>typed js</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img src="./assets/icons/Vue.js.svg" alt="Vue" class="skill-icon" />
+
+          <span class="skill-label">Vue</span>
+
+          <small>frontend</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img
+            src="./assets/icons/Nuxt JS.svg"
+            alt="Nuxt.js"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Nuxt.js</span>
+
+          <small>framework</small>
+        </div>
+
+        <div class="skill" data-category="frontend">
+          <img src="./assets/icons/React.svg" alt="React" class="skill-icon" />
+
+          <span class="skill-label">React</span>
+
+          <small>ui library</small>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="skill" data-category="backend">
+          <img src="./assets/icons/PHP.svg" alt="PHP" class="skill-icon" />
+
+          <span class="skill-label">PHP</span>
+
+          <small>backend</small>
+        </div>
+
+        <div class="skill" data-category="backend">
+          <img
+            src="./assets/icons/Laravel.svg"
+            alt="Laravel"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Laravel</span>
+
+          <small>main stack</small>
+        </div>
+
+        <div class="skill" data-category="backend">
+          <img
+            src="./assets/icons/Node.js.svg"
+            alt="Node.js"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Node.js</span>
+
+          <small>server runtime</small>
+        </div>
+
+        <div class="skill" data-category="backend">
+          <img
+            src="./assets/icons/Nest.js.svg"
+            alt="Nest.js"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Nest.js</span>
+
+          <small>backend framework</small>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="skill" data-category="tools">
+          <img src="./assets/icons/Figma.svg" alt="Figma" class="skill-icon" />
+
+          <span class="skill-label">Figma</span>
+
+          <small>design</small>
+        </div>
+
+        <div class="skill" data-category="tools">
+          <img src="./assets/icons/Jira.svg" alt="Jira" class="skill-icon" />
+
+          <span class="skill-label">Jira</span>
+
+          <small>management</small>
+        </div>
+
+        <div class="skill" data-category="tools">
+          <img src="./assets/icons/Linux.svg" alt="Linux" class="skill-icon" />
+
+          <span class="skill-label">Linux</span>
+
+          <small>environment</small>
+        </div>
+
+        <div class="skill" data-category="tools">
+          <img
+            src="./assets/icons/Postman.svg"
+            alt="Postman"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Postman</span>
+
+          <small>api testing</small>
+        </div>
+
+        <div class="skill" data-category="tools">
+          <img
+            src="./assets/icons/Insomnia.svg"
+            alt="Insomnia"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Insomnia</span>
+
+          <small>http client</small>
+        </div>
+
+        <div class="skill" data-category="tools">
+          <img
+            src="./assets/icons/RabbitMQ.svg"
+            alt="RabbitMQ"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">RabbitMQ</span>
+
+          <small>queue system</small>
+        </div>
+
+        <!-- DEPLOY -->
+        <div class="skill" data-category="deploy">
+          <img
+            src="./assets/icons/Docker.svg"
+            alt="Docker"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">Docker</span>
+
+          <small>containers</small>
+        </div>
+
+        <!-- VERSION -->
+        <div class="skill" data-category="version">
+          <img src="./assets/icons/Git.svg" alt="Git" class="skill-icon" />
+
+          <span class="skill-label">Git</span>
+
+          <small>versioning</small>
+        </div>
+
+        <div class="skill" data-category="version">
+          <img
+            src="./assets/icons/GitHub.svg"
+            alt="GitHub"
+            class="skill-icon"
+          />
+
+          <span class="skill-label">GitHub</span>
+
+          <small>repository</small>
+        </div>
+      </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- EXPERIENCE -->
+    <section id="experience-section">
+      <div class="section-terminal-title">> ~/thirde/experience.log</div>
 
-    <!-- SECTION 4: MESSAGE-->
-    <section id="leave-message-section">
-        <h2>Leave a message :)</h2>
+      <div class="experience-container">
+        <!-- TESDA -->
+        <div class="experience-entry">
+          <div class="experience-date">
+            <span>2025 - PRESENT</span>
+          </div>
 
-        <div class="group">
-            <p class="contact-note">
-                You can also <strong>text or call me</strong> at <a href="tel:09916574940">0991 657 4940</a>.
+          <div class="experience-main">
+            <div class="experience-header">
+              <h3>COMPUTER PROGRAMMER II</h3>
+
+              <span class="experience-tag gov-tag">[ JOB ORDER ]</span>
+            </div>
+
+            <p class="experience-company">
+              Technical Education and Skills Development Authority
             </p>
 
-            <form id="comment-form" action="https://formspree.io/f/mblapwgy" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" cols="30" rows="10" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-
-            <p id="form-message"></p>
+            <p class="experience-description">
+              Building and maintaining digital infrastructure supporting
+              technical education systems across the Philippines.
+            </p>
+          </div>
         </div>
+
+        <!-- BACKEND -->
+        <div class="experience-entry">
+          <div class="experience-date">
+            <span>FEB 2025 - SEP 2025</span>
+          </div>
+
+          <div class="experience-main">
+            <div class="experience-header">
+              <h3>JUNIOR SOFTWARE ENGINEER - BACKEND</h3>
+
+              <span class="experience-tag">[ FULL-TIME ]</span>
+            </div>
+
+            <p class="experience-company">Seaversity Inc.</p>
+
+            <p class="experience-description">
+              Worked on backend services, API integrations, and scalable system
+              architecture for enterprise-level applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- FRONTEND -->
+        <div class="experience-entry">
+          <div class="experience-date">
+            <span>2023 - JAN 2025</span>
+          </div>
+
+          <div class="experience-main">
+            <div class="experience-header">
+              <h3>FRONTEND DEVELOPER</h3>
+
+              <span class="experience-tag">[ FULL-TIME ]</span>
+            </div>
+
+            <p class="experience-company">Seaversity Inc.</p>
+
+            <p class="experience-description">
+              Developed responsive interfaces and production-ready frontend
+              systems for large-scale education and maritime platforms.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects-section">
+      <div class="section-terminal-title">> ~/thirde/projects.log</div>
 
-    <footer>
-        <p>© 2025 Thirde Aguilera. All Rights. Reserved.</p>
+      <!-- DYNAMIC PROJECTS -->
+      <div class="projects-container" id="projects-container">
+        <!-- injected by JS -->
+      </div>
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CONTACT -->
+    <section id="leave-message-section">
+      <div class="section-terminal-title">> ~/thirde/contact.sh</div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const typingElement = document.querySelector(".typing-text");
-                const words = ["Software Developer", "Frontend Developer", "Backend Developer", "Full Stack Developer"];
-                let wordIndex = 0;
-                let charIndex = 0;
-                let isDeleting = false;
+      <div class="terminal-contact-shell">
+        <!-- TERMINAL TOP -->
+        <div class="terminal-shell-header">
+          <div class="terminal-shell-buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-                function typeEffect() {
-                    let currentWord = words[wordIndex];
-                    let displayText = isDeleting ?
-                        currentWord.substring(0, charIndex--) :
-                        currentWord.substring(0, charIndex++);
+          <div class="terminal-shell-name">thirde-shell</div>
 
-                    typingElement.textContent = displayText;
+          <div class="terminal-shell-meta">secure_session</div>
+        </div>
 
-                    let typingSpeed = isDeleting ? 50 : 100;
+        <!-- TERMINAL BODY -->
+        <div class="terminal-shell-body" id="terminal-body">
+          <div class="terminal-line">
+            <span class="terminal-user">system@thirde:~$</span>
 
-                    if (!isDeleting && charIndex === currentWord.length + 1) {
-                        typingSpeed = 2000; // Wait before deleting
-                        isDeleting = true;
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-                    }
+            <span>secure shell initialized...</span>
+          </div>
 
-                    setTimeout(typeEffect, typingSpeed);
-                }
+          <div class="terminal-line">
+            <span class="terminal-user">system@thirde:~$</span>
 
-                typeEffect();
+            <span>available commands:</span>
+          </div>
 
-                document.addEventListener("DOMContentLoaded", function () {
-                    document.querySelectorAll("nav a").forEach(anchor => {
-                        anchor.addEventListener("click", function (event) {
-                            const targetId = this.getAttribute("href");
-                            if (targetId.startsWith("#")) {
-                                event.preventDefault(); // Prevent default jump
-                                document.querySelector(targetId)?.scrollIntoView({ behavior: "smooth" });
-                            }
-                        });
-                    });
-                });
+          <div class="terminal-output">
+            contact
+            <br />
+            clear
+          </div>
 
-            });
+          <!-- ACTIVE INPUT -->
+          <div class="terminal-input-line">
+            <span class="terminal-user">thirde@portfolio:~$</span>
 
-            /* Hamburger Menu */
-            const hamburger = document.getElementById('hamburger');
-            const navDropdown = document.getElementById('nav-dropdown');
-            const classBody = document.body;
+            <input
+              type="text"
+              id="terminal-command"
+              autocomplete="off"
+              spellcheck="false"
+              autofocus
+            />
+          </div>
+        </div>
+      </div>
 
-            // Toggle on hamburger click
-            hamburger.addEventListener('click', () => {
-                navDropdown.classList.toggle('active');
-                classBody.classList.toggle('no-scroll');
-            });
+      <!-- HIDDEN FORMSPREE FORM -->
+      <form
+        id="comment-form"
+        action="https://formspree.io/f/mblapwgy"
+        method="POST"
+        style="display: none"
+      >
+        <input type="text" id="hidden-name" name="name" />
 
-            navDropdown.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navDropdown.classList.remove('active');
-                    classBody.classList.remove('no-scroll');
-                });
-            });
+        <input type="email" id="hidden-email" name="email" />
 
-            /* Skills Section Tabs */
-            const tabs = document.querySelectorAll('.tab');
-            const skills = document.querySelectorAll('.skill');
-            const loader = document.getElementById('skill-loader');
+        <textarea id="hidden-message" name="message"></textarea>
+      </form>
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const filter = tab.getAttribute('data-filter');
+      <p id="form-message" style="display: none"></p>
 
-                    // 🔄 Highlight active tab
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
+      <!-- CONTACT FOOTER -->
+      <div class="terminal-contact-footer">
+        <div class="footer-contact-item">
+          <i class="fa-regular fa-envelope"></i>
 
-                    // 🔁 Reset loader animation
-                    const loaderBar = loader.querySelector('.loader');
-                    loaderBar.classList.remove('loader');
-                    void loaderBar.offsetWidth; // force reflow
-                    loaderBar.classList.add('loader');
+          <span>aguilerathirde@gmail.com</span>
+        </div>
 
-                    // 🌀 Show loader overlay
-                    loader.classList.remove('hidden', 'hide');
-                    requestAnimationFrame(() => {
-                        loader.classList.add('show');
-                    });
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
 
-                    // ⚙️ Delay before filtering
-                    setTimeout(() => {
-                        let delay = 0;
+          <span>+63 991 657 4940</span>
+        </div>
 
-                        // 🔻 Fade out and hide unmatched skills
-                        skills.forEach(skill => {
-                            const category = skill.getAttribute('data-category');
-                            const shouldShow = filter === 'all' || category === filter;
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
 
-                            if (!shouldShow) {
-                                skill.style.display = 'none';
-                                skill.classList.remove('fade-in');
-                                skill.classList.add('fade-out');
-                            }
-                        });
+          <span>Manila, Philippines</span>
+        </div>
+      </div>
+    </section>
 
-                        // 🔺 Fade in and show matched skills (with stagger)
-                        skills.forEach(skill => {
-                            const category = skill.getAttribute('data-category');
-                            const shouldShow = filter === 'all' || category === filter;
+    <!-- DESIGN -->
 
-                            if (shouldShow) {
-                                setTimeout(() => {
-                                    skill.style.display = 'flex';
-                                    skill.classList.remove('fade-out');
-                                    skill.classList.add('fade-in');
-                                    void skill.offsetWidth; // force reflow
-                                    skill.style.opacity = '1';
-                                    skill.style.transform = 'scale(1)';
-                                }, delay + 50);
-                                delay += 75;
-                            }
-                        });
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                        // ✅ Hide loader after 1s
-                        setTimeout(() => {
-                            loader.classList.remove('show');
-                            loader.classList.add('hide'); // fade out
-                        }, 1000);
-                    }, 100);
-                });
-            });
-            /* Fetch Project Data */
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const typingElement = document.querySelector('.typing-text')
+        const words = [
+          'Software Developer',
+          'Frontend Developer',
+          'Backend Developer',
+          'Full Stack Developer',
+        ]
+        let wordIndex = 0
+        let charIndex = 0
+        let isDeleting = false
 
-            // fetch("/public/data/data.json") For Local
-            fetch("/data/data.json") // For Production
-                .then(res => res.json())
-                .then(projects => {
-                    const container = document.getElementById('projects-container');
-                    projects.forEach((project, index) => {
-                        const html = `
+        function typeEffect() {
+          let currentWord = words[wordIndex]
+          let displayText = isDeleting
+            ? currentWord.substring(0, charIndex--)
+            : currentWord.substring(0, charIndex++)
+
+          typingElement.textContent = displayText
+
+          let typingSpeed = isDeleting ? 50 : 100
+
+          if (!isDeleting && charIndex === currentWord.length + 1) {
+            typingSpeed = 2000 // Wait before deleting
+            isDeleting = true
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false
+            wordIndex = (wordIndex + 1) % words.length // Move to the next word
+          }
+
+          setTimeout(typeEffect, typingSpeed)
+        }
+
+        typeEffect()
+
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('nav a').forEach((anchor) => {
+            anchor.addEventListener('click', function (event) {
+              const targetId = this.getAttribute('href')
+              if (targetId.startsWith('#')) {
+                event.preventDefault() // Prevent default jump
+                document
+                  .querySelector(targetId)
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+            })
+          })
+        })
+      })
+
+      /* Hamburger Menu */
+      const hamburger = document.getElementById('hamburger')
+      const navDropdown = document.getElementById('nav-dropdown')
+      const classBody = document.body
+
+      // Toggle on hamburger click
+      hamburger.addEventListener('click', () => {
+        navDropdown.classList.toggle('active')
+        classBody.classList.toggle('no-scroll')
+      })
+
+      navDropdown.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navDropdown.classList.remove('active')
+          classBody.classList.remove('no-scroll')
+        })
+      })
+
+      /* Skills Section Tabs */
+      const tabs = document.querySelectorAll('.tab')
+      const skills = document.querySelectorAll('.skill')
+      const loader = document.getElementById('skill-loader')
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.getAttribute('data-filter')
+
+          // 🔄 Highlight active tab
+          tabs.forEach((t) => t.classList.remove('active'))
+          tab.classList.add('active')
+
+          // 🔁 Reset loader animation
+          const loaderBar = loader.querySelector('.loader')
+          loaderBar.classList.remove('loader')
+          void loaderBar.offsetWidth // force reflow
+          loaderBar.classList.add('loader')
+
+          // 🌀 Show loader overlay
+          loader.classList.remove('hidden', 'hide')
+          requestAnimationFrame(() => {
+            loader.classList.add('show')
+          })
+
+          // ⚙️ Delay before filtering
+          setTimeout(() => {
+            let delay = 0
+
+            // 🔻 Fade out and hide unmatched skills
+            skills.forEach((skill) => {
+              const category = skill.getAttribute('data-category')
+              const shouldShow = filter === 'all' || category === filter
+
+              if (!shouldShow) {
+                skill.style.display = 'none'
+                skill.classList.remove('fade-in')
+                skill.classList.add('fade-out')
+              }
+            })
+
+            // 🔺 Fade in and show matched skills (with stagger)
+            skills.forEach((skill) => {
+              const category = skill.getAttribute('data-category')
+              const shouldShow = filter === 'all' || category === filter
+
+              if (shouldShow) {
+                setTimeout(() => {
+                  skill.style.display = 'flex'
+                  skill.classList.remove('fade-out')
+                  skill.classList.add('fade-in')
+                  void skill.offsetWidth // force reflow
+                  skill.style.opacity = '1'
+                  skill.style.transform = 'scale(1)'
+                }, delay + 50)
+                delay += 75
+              }
+            })
+
+            // ✅ Hide loader after 1s
+            setTimeout(() => {
+              loader.classList.remove('show')
+              loader.classList.add('hide') // fade out
+            }, 1000)
+          }, 100)
+        })
+      })
+      /* Fetch Project Data */
+
+      // fetch("/public/data/data.json") For Local
+      fetch('/public/data/data.json') // For Production
+        .then((res) => res.json())
+        .then((projects) => {
+          const container = document.getElementById('projects-container')
+          projects.forEach((project, index) => {
+            const html = `
                         <div class="project-card">
                             <div class="project-number">${project.number}</div>
                             <div class="project-content">
@@ -397,87 +847,241 @@
                                 </div>
                             </div>
                         </div>
-                        `;
-                        container.insertAdjacentHTML('beforeend', html);
-                    });
-                })
+                        `
+            container.insertAdjacentHTML('beforeend', html)
+          })
+        })
 
-            const toggleButton = document.getElementById('theme-toggle');
-            const body = document.body;
+      const toggleButton = document.getElementById('theme-toggle')
+      const body = document.body
 
-            function updateThemeUI() {
-                if (body.classList.contains('dark-mode')) {
-                    toggleButton.innerHTML = '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>';
+      function updateThemeUI() {
+        if (body.classList.contains('dark-mode')) {
+          toggleButton.innerHTML =
+            '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>'
+        } else {
+          toggleButton.innerHTML =
+            '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>'
+        }
+      }
+
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode')
+        localStorage.setItem(
+          'dark-mode',
+          body.classList.contains('dark-mode') ? 'enabled' : 'disabled',
+        )
+        updateThemeUI()
+      })
+
+      // Load user preference
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode')
+      }
+      updateThemeUI()
+
+      /*Interactive Project Box*/
+      document.querySelectorAll('.project-box').forEach((box) => {
+        box.addEventListener('mouseover', () => {
+          box.style.transform = 'scale(1.05)'
+          box.style.transition = 'transform 0.3s ease'
+        })
+
+        box.addEventListener('mouseout', () => {
+          box.style.transform = 'scale(1)'
+        })
+      })
+
+      /* message form */
+      const form = document.getElementById('comment-form')
+      const status = document.getElementById('form-message')
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        status.textContent = 'Sending...'
+        status.style.color = '#6D7895'
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.textContent = 'Message sent successfully!'
+              status.style.color = 'green'
+              form.reset()
+            } else {
+              response.json().then((data) => {
+                if (data.errors) {
+                  status.textContent = data.errors
+                    .map((error) => error.message)
+                    .join(', ')
                 } else {
-                    toggleButton.innerHTML = '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>';
+                  status.textContent =
+                    'Error sending message. Please try again.'
                 }
+                status.style.color = 'red'
+              })
             }
+          })
+          .catch((error) => {
+            status.textContent = 'Error sending message. Please try again.'
+            status.style.color = 'red'
+            console.error('Form submission error:', error)
+          })
+      })
+    </script>
 
-            toggleButton.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-                localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
-                updateThemeUI();
-            });
+    <script>
+      /* =========================================
+   TERMINAL CONTACT SYSTEM
+========================================= */
 
-            // Load user preference
-            if (localStorage.getItem('dark-mode') === 'enabled') {
-                body.classList.add('dark-mode');
-            }
-            updateThemeUI();
+      const terminalBody = document.getElementById('terminal-body')
+      const terminalInput = document.getElementById('terminal-command')
 
-            /*Interactive Project Box*/
-            document.querySelectorAll('.project-box').forEach(box => {
-                box.addEventListener('mouseover', () => {
-                    box.style.transform = 'scale(1.05)';
-                    box.style.transition = 'transform 0.3s ease';
-                });
+      const hiddenName = document.getElementById('hidden-name')
+      const hiddenEmail = document.getElementById('hidden-email')
+      const hiddenMessage = document.getElementById('hidden-message')
 
-                box.addEventListener('mouseout', () => {
-                    box.style.transform = 'scale(1)';
-                });
-            });
+      const hiddenForm = document.getElementById('comment-form')
 
-            /* message form */
-            const form = document.getElementById('comment-form');
-            const status = document.getElementById('form-message');
+      let activeMode = null
 
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
+      function appendLine(content, className = 'terminal-output') {
+        const line = document.createElement('div')
+        line.className = className
+        line.innerHTML = content
 
-                status.textContent = "Sending...";
-                status.style.color = "#6D7895";
+        terminalBody.insertBefore(
+          line,
+          document.querySelector('.terminal-input-line'),
+        )
 
+        terminalBody.scrollTop = terminalBody.scrollHeight
+      }
 
-                fetch(form.action, {
-                    method: "POST",
-                    body: new FormData(form),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            status.textContent = "Message sent successfully!";
-                            status.style.color = "green";
-                            form.reset();
-                        } else {
-                            response.json().then(data => {
-                                if (data.errors) {
-                                    status.textContent = data.errors.map(error => error.message).join(", ");
-                                } else {
-                                    status.textContent = "Error sending message. Please try again.";
-                                }
-                                status.style.color = "red";
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        status.textContent = "Error sending message. Please try again.";
-                        status.style.color = "red";
-                        console.error("Form submission error:", error);
-                    });
-            });
-        </script>
-</body>
+      function clearTerminal() {
+        terminalBody.innerHTML = `
+    <div class="terminal-line">
+      <span class="terminal-user">
+        system@thirde:~$
+      </span>
 
+      <span>
+        terminal cleared.
+      </span>
+    </div>
+
+    <div class="terminal-input-line">
+      <span class="terminal-user">
+        thirde@portfolio:~$
+      </span>
+
+      <input
+        type="text"
+        id="terminal-command"
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+  `
+
+        reconnectInput()
+      }
+
+      function reconnectInput() {
+        const newInput = document.getElementById('terminal-command')
+
+        newInput.focus()
+
+        newInput.addEventListener('keydown', handleCommand)
+      }
+
+      function launchContactForm() {
+        appendLine(`
+    initializing contact sequence...
+  `)
+
+        appendLine(`
+    <div class="terminal-generated-form">
+      <label>> NAME</label>
+      <input type="text" id="terminal-name" />
+
+      <label>> EMAIL</label>
+      <input type="email" id="terminal-email" />
+
+      <label>> MESSAGE</label>
+      <textarea id="terminal-message" rows="6"></textarea>
+
+      <button id="terminal-send">
+        [ EXECUTE SEND ]
+      </button>
+    </div>
+  `)
+
+        setTimeout(() => {
+          document
+            .getElementById('terminal-send')
+            .addEventListener('click', () => {
+              hiddenName.value = document.getElementById('terminal-name').value
+
+              hiddenEmail.value =
+                document.getElementById('terminal-email').value
+
+              hiddenMessage.value =
+                document.getElementById('terminal-message').value
+
+              hiddenForm.dispatchEvent(
+                new Event('submit', {
+                  cancelable: true,
+                  bubbles: true,
+                }),
+              )
+
+              appendLine(`
+          message transmitted successfully...
+        `)
+            })
+        }, 100)
+      }
+
+      function handleCommand(e) {
+        if (e.key !== 'Enter') return
+
+        const command = e.target.value.trim().toLowerCase()
+
+        appendLine(`
+    <div class="terminal-line">
+      <span class="terminal-user">
+        thirde@portfolio:~$
+      </span>
+
+      <span>${command}</span>
+    </div>
+  `)
+
+        if (command === 'contact') {
+          launchContactForm()
+        } else if (command === 'clear') {
+          clearTerminal()
+          return
+        } else {
+          appendLine(`
+      command not found: ${command}
+    `)
+        }
+
+        e.target.value = ''
+
+        terminalBody.scrollTop = terminalBody.scrollHeight
+      }
+
+      terminalInput.addEventListener('keydown', handleCommand)
+    </script>
+  </body>
 </html>

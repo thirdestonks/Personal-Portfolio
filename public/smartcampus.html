@@ -2,222 +2,370 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="project-detail.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="project-styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        rel="stylesheet"
+    />
 
-    <title>Smart Campus - Thirde Aguilera Portfolio</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <title>Smart Campus — Thirde Aguilera</title>
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode project-terminal-page">
+
+    <!-- TERMINAL FX -->
+    <div class="noise"></div>
+
+    <div class="scanline"></div>
+
+    <!-- HEADER -->
     <header>
         <nav>
-            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
+            <button id="hamburger">☰</button>
 
             <div class="left">
                 <a id="brand-name" href="index.html#about-section">
-                    <span class="brand-full">Thirde Aguilera</span>
-                    <span class="brand-short">T.A</span>
+                    <span class="brand-full">thirde@projects:~$</span>
+
+                    <span class="brand-short">t3</span>
                 </a>
             </div>
 
             <div class="right desktop-only">
-                <a href="index.html#about-section">About</a>
-                <a href="index.html#projects-section">Projects</a>
-                <a href="index.html#skills-section">Skills</a>
-                <a href="index.html#leave-message-section">Contact</a>
+                <a href="index.html#about-section">./about</a>
+
+                <a href="index.html#projects-section">./projects</a>
+
+                <a href="index.html#skills-section">./skills</a>
+
+                <a href="index.html#leave-message-section">./contact</a>
             </div>
 
             <div class="toggle">
                 <button id="theme-toggle">
-                    <span id="theme-text">Light Mode</span>
-                    <i class="fa-solid fa-sun"></i>
+                    <span id="theme-text">SYS_THEME</span>
+
+                    <i class="fa-solid fa-terminal"></i>
                 </button>
             </div>
         </nav>
-
     </header>
-    <!-- For Hamburger menu -->
+
+    <!-- MOBILE NAV -->
     <nav class="nav-dropdown" id="nav-dropdown">
-        <a href="index.html#about-section">About</a>
-        <a href="index.html#projects-section">Projects</a>
-        <a href="index.html#skills-section">Skills</a>
-        <a href="index.html#leave-message-section">Contact</a>
+        <a href="index.html#about-section">./about</a>
+
+        <a href="index.html#projects-section">./projects</a>
+
+        <a href="index.html#skills-section">./skills</a>
+
+        <a href="index.html#leave-message-section">./contact</a>
     </nav>
 
-
-    <!-- Project Hero Section -->
+    <!-- PROJECT HERO -->
     <section class="project-hero">
-        <div class="project-header">
-            <h1>Smart Campus</h1>
-            <p class="project-subtitle">large-scale platform comprising 20+ modules such as Admission, Library,
-                Registrar, Cashier, and Accounting.
-                Designed as a dynamic system tailored for marine schools. Complete with dynamic email configuration and
-                real time features</p>
+        <div class="project-terminal-path">
+            > ~/projects/smart-campus
+        </div>
+
+        <div class="project-terminal-window">
+            <!-- TOP -->
+            <div class="project-terminal-top">
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="project-terminal-title">
+                    smart-campus.enterprise
+                </div>
+
+                <div class="project-terminal-status">
+                    DEPLOYED
+                </div>
+            </div>
+
+            <!-- BODY -->
+            <div class="project-terminal-body">
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <h1>Smart Campus</h1>
+
+                        <p class="project-subtitle">
+                            Enterprise-scale academic management platform
+                            comprising 20+ interconnected modules for
+                            marine institutions and administrative operations.
+                        </p>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="project-meta-row">
+                            <span>STATUS</span>
+
+                            <span>PRODUCTION READY</span>
+                        </div>
+
+                        <div class="project-meta-row">
+                            <span>STACK</span>
+
+                            <span>LARAVEL + NUXT3</span>
+                        </div>
+
+                        <div class="project-meta-row">
+                            <span>TYPE</span>
+
+                            <span>ENTERPRISE SYSTEM</span>
+                        </div>
+
+                        <div class="project-meta-row">
+                            <span>MODULES</span>
+
+                            <span>20+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Process Highlights Section -->
+    <!-- PROCESS -->
     <section class="process-section">
-        <div class="section-header">
-            <h3>PROCESS</h3>
-            <h2>How I Built It</h2>
+        <div class="project-section-title">
+            > build.log
         </div>
+
         <div class="process-details">
             <div class="detail-column">
-                <h3>Timeline</h3>
+                <h3>TIMELINE</h3>
+
                 <p>Aug 2023 - April 2025</p>
             </div>
 
             <div class="detail-column">
-                <h3>Disciplines</h3>
-                <p>User Experience Design<br>
-                    User Interface Design<br>
-                    UI/UX design<br>
-                    Full-Stack Development</p>
+                <h3>DISCIPLINES</h3>
+
+                <p>
+                    User Experience Design
+                    <br />
+                    User Interface Design
+                    <br />
+                    Full Stack Development
+                </p>
             </div>
 
             <div class="detail-column">
-                <h3>Tools</h3>
-                <p>Figma<br>
+                <h3>TOOLS</h3>
+
+                <p>
+                    Figma
+                    <br />
                     MinIO S3
                 </p>
             </div>
 
             <div class="detail-column">
-                <h3>Tech Stack</h3>
-                <p>Nuxt3<br>
-                    Laravel<br>
-                    NestJS<br>
-                    Tailwind CSS<br>
-                    Vuetify<br>
-                    PostgreSQL<br>
-                    JWT<br>
-                    RabbitMQ<br>
-                    Mailer
+                <h3>TECH STACK</h3>
+
+                <p>
+                    Nuxt3
+                    <br />
+                    Laravel
+                    <br />
+                    NestJS
+                    <br />
+                    PostgreSQL
+                    <br />
+                    RabbitMQ
+                    <br />
+                    JWT
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Project Background Section -->
+    <!-- BACKGROUND -->
     <section class="background-section">
-        <div class="section-header">
-            <h3>BACKGROUND</h3>
-            <h2>The Why</h2>
+        <div class="project-section-title">
+            > about_project.md
         </div>
 
         <div class="background-content">
-            <p>Smart Campus was developed as a large-scale enterprise solution for marine schools, designed to replace
-                 manual processes with a fully digital and modern platform.</p>
-            <p>Built in collaboration with the academy, the system spans <strong>20+ interconnected modules</strong> —
-                including Admission, Library, Registrar, Cashier, and Accounting — all working together to streamline
-                operations and create a unified digital ecosystem.</p>
-            <p>The purpose was not just to digitalize existing workflows, but to modernize how marine schools handle
-                their
-                day-to-day tasks, improve communication, and provide real-time visibility into critical academic and
-                administrative processes.</p>
-            <p>By centralizing everything into one dynamic platform, Smart Campus empowers institutions to operate more
-                efficiently, reduce paperwork, and scale to meet the growing demands of maritime education.</p>
-        </div>
+            <p>
+                Smart Campus was developed as a large-scale enterprise
+                solution for marine institutions, designed to replace
+                fragmented manual processes with a centralized digital ecosystem.
+            </p>
 
+            <p>
+                The platform consists of 20+ interconnected modules —
+                including Admission, Registrar, Library, Cashier,
+                Accounting, and academic management systems —
+                all integrated into a unified infrastructure.
+            </p>
+
+            <p>
+                Beyond digitalization, the system focused heavily on
+                scalability, real-time communication, dynamic configuration,
+                and operational efficiency for maritime education institutions.
+            </p>
+
+            <p>
+                The result was a production-ready enterprise platform capable
+                of supporting institutional growth while improving workflow
+                visibility and reducing administrative overhead.
+            </p>
+        </div>
     </section>
 
-    <!-- Project Features Section -->
+    <!-- FEATURES -->
     <section class="features-section">
-        <div class="section-header">
-            <h3>FEATURES</h3>
-            <h2>Key Functionality</h2>
+        <div class="project-section-title">
+            > feature_registry.json
         </div>
 
         <div class="features-grid">
             <div class="feature-card">
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h3>20+ Modules</h3>
+
+                <p>
+                    Integrated academic and administrative systems
+                    operating under one platform architecture.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Realtime Systems</h3>
+
+                <p>
+                    Realtime notifications, email processing,
+                    and status synchronization across modules.
+                </p>
+            </div>
+
+            <div class="feature-card">
                 <i class="fa-solid fa-cloud"></i>
-                <h3>S3 Compatible</h3>
-                <p>Seamlessly integrates with S3 storage for easy media management</p>
+
+                <h3>S3 Integration</h3>
+
+                <p>
+                    Integrated MinIO S3-compatible storage
+                    for scalable media and document handling.
+                </p>
             </div>
 
             <div class="feature-card">
-                <i class="fa-solid fa-clock-o"></i>
-                <h3>Realtime Features</h3>
-                <p>Notifications, emails and status updates are all real-time</p>
-            </div>
+                <i class="fa-solid fa-gears"></i>
 
-            <div class="feature-card">
-                <i class="fa-solid fa-desktop"></i>
-                <h3>Fully Responsive Design</h3>
-                <p>Works smoothly on all devices</p>
-            </div>
+                <h3>Dynamic Config</h3>
 
-            <div class="feature-card">
-                <i class="fa-solid fa-cog"></i>
-                <h3>Dynamic Configuration</h3>
-                <p>Major components are configurable especially Database driven triggers.</p>
+                <p>
+                    Database-driven triggers and configurable
+                    enterprise workflows across the platform.
+                </p>
             </div>
         </div>
     </section>
 
-
-
+    <!-- FOOTER -->
     <footer>
-        <p>© 2025 Thirde Aguilera. All Rights Reserved.</p>
+        <div class="footer-terminal">
+            <span>
+                © 2026 thirde.dev — enterprise system dossier loaded
+            </span>
+
+            <div class="footer-links">
+                <a
+                    href="https://github.com/thirdestonks"
+                    target="_blank"
+                >
+                    <i class="fa-brands fa-github"></i>
+
+                    github
+                </a>
+
+                <a href="index.html#projects-section">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    back to projects
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // Theme toggle functionality
-        const toggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
+        const toggleButton = document.getElementById('theme-toggle')
+        const body = document.body
 
         function updateThemeUI() {
             if (body.classList.contains('dark-mode')) {
-                toggleButton.innerHTML = '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>';
+                toggleButton.innerHTML =
+                    '<span id="theme-text">Light Mode</span> <i class="fa-solid fa-sun"></i>'
             } else {
-                toggleButton.innerHTML = '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>';
+                toggleButton.innerHTML =
+                    '<span id="theme-text">Dark Mode</span> <i class="fa-solid fa-moon"></i>'
             }
         }
 
         toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
-            updateThemeUI();
-        });
+            body.classList.toggle('dark-mode')
 
-        /* Hamburger Menu */
-        const hamburger = document.getElementById('hamburger');
-        const navDropdown = document.getElementById('nav-dropdown');
-        const classBody = document.body;
+            localStorage.setItem(
+                'dark-mode',
+                body.classList.contains('dark-mode')
+                    ? 'enabled'
+                    : 'disabled'
+            )
 
-        // Toggle on hamburger click
+            updateThemeUI()
+        })
+
+        const hamburger = document.getElementById('hamburger')
+        const navDropdown = document.getElementById('nav-dropdown')
+        const classBody = document.body
+
         hamburger.addEventListener('click', () => {
-            navDropdown.classList.toggle('active');
-            classBody.classList.toggle('no-scroll');
-        });
+            navDropdown.classList.toggle('active')
+            classBody.classList.toggle('no-scroll')
+        })
 
-        // ✅ Auto-close dropdown when a nav link is clicked
-        navDropdown.querySelectorAll('a').forEach(link => {
+        navDropdown.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
-                navDropdown.classList.remove('active');
-                classBody.classList.remove('no-scroll');
-            });
-        });
+                navDropdown.classList.remove('active')
+                classBody.classList.remove('no-scroll')
+            })
+        })
 
-        // Load user preference
         if (localStorage.getItem('dark-mode') === 'enabled') {
-            body.classList.add('dark-mode');
+            body.classList.add('dark-mode')
         } else if (localStorage.getItem('dark-mode') === 'disabled') {
-            body.classList.remove('dark-mode');
+            body.classList.remove('dark-mode')
         }
 
-        updateThemeUI();
+        updateThemeUI()
     </script>
 </body>
 

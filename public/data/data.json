@@ -9,7 +9,7 @@
   },
   {
     "number": "02 | FULL-STACK ENGINEER - SMART CAMPUS (COMPANY USE ONLY)",
-    "image": "/images/company-use.png",
+    "image": "./images/company-use.png",
     "alt": "Smart Campus",
     "title": "Smart Campus",
     "description": "A large-scale campus management system with 20+ modules, built to modernize marine schools.",
@@ -17,7 +17,7 @@
   },
   {
     "number": "03 | FULL-STACK ENGINEER - DYNAMIC ENROLLMENT SYSTEM (COMPANY USE ONLY)",
-    "image": "/images/company-use.png",
+    "image": "./images/company-use.png",
     "alt": "Dynamic Enrollment System",
     "title": "Dynamic Enrollment System",
     "description": "A highly configurable enrollment system designed for schools and academies. Features include a payment gateway integration, dynamic email notifications, and flexible workflows that adapt to various academic requirements.",
