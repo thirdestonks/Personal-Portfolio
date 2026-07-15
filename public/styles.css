@@ -355,6 +355,11 @@ nav {
   grid-template-columns: 1fr 1fr;
 }
 
+.project-content.portrait-fit {
+  grid-template-columns: 280px 1fr;
+  align-items: stretch;
+}
+
 .project-image img {
   width: 100%;
   height: 100%;
@@ -363,17 +368,21 @@ nav {
 }
 
 .project-image.portrait-fit {
-  background: #000;
+  background: rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .project-image.portrait-fit img {
+  width: 100%;
   height: auto;
-  max-height: 420px;
   object-fit: contain;
   filter: none;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .project-info {
@@ -997,8 +1006,14 @@ footer {
   }
 
   .project-content,
+  .project-content.portrait-fit,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-image.portrait-fit img {
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
 

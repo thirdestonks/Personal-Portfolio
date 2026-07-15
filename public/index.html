@@ -836,7 +836,7 @@
             const html = `
                         <div class="project-card">
                             <div class="project-number">${project.number}</div>
-                            <div class="project-content">
+                            <div class="project-content${project.portrait ? ' portrait-fit' : ''}">
                                 <div class="project-image${project.portrait ? ' portrait-fit' : ''}">
                                     <img src="${project.image}" alt="${project.alt}">
                                 </div>
