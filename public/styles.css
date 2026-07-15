@@ -362,6 +362,20 @@ nav {
   filter: grayscale(0.2);
 }
 
+.project-image.portrait-fit {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image.portrait-fit img {
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  filter: none;
+}
+
 .project-info {
   padding: 3rem;
   display: flex;

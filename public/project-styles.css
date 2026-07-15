@@ -147,6 +147,37 @@
 }
 
 /* =========================================
+   MOBILE SCREENS GALLERY (portrait projects)
+========================================= */
+
+.mobile-screens-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.mobile-screen {
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(124,255,91,.03);
+}
+
+.mobile-screen img {
+    width: 100%;
+    display: block;
+    filter: contrast(1.05);
+}
+
+.mobile-screen-caption {
+    text-align: center;
+    padding: .9rem 0;
+    color: var(--muted);
+    font-size: .85rem;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================================
    SECTION TITLES
 ========================================= */
 
@@ -272,6 +303,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .mobile-screens-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .project-terminal-top {
         grid-template-columns: 1fr;
         gap: .7rem;
@@ -307,6 +342,10 @@ footer {
 
     .background-content {
         padding: 1.5rem;
+    }
+
+    .mobile-screens-grid {
+        grid-template-columns: 1fr;
     }
 
 }
