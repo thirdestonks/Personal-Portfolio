@@ -930,10 +930,9 @@
         })
 
         requestAnimationFrame(() => {
-          const activeCard = container.querySelector('.stack-card.is-active')
-          if (activeCard) {
-            container.style.minHeight = `${activeCard.offsetHeight}px`
-          }
+          const cards = [...container.querySelectorAll('.stack-card')]
+          const tallest = Math.max(...cards.map((card) => card.offsetHeight))
+          container.style.minHeight = `${tallest}px`
         })
       }
 
@@ -943,6 +942,15 @@
           projectsData.length
         renderProjectStack()
       }
+
+      window.addEventListener('resize', () => {
+        const container = document.getElementById('projects-container')
+        if (!container) return
+        const cards = [...container.querySelectorAll('.stack-card')]
+        if (!cards.length) return
+        const tallest = Math.max(...cards.map((card) => card.offsetHeight))
+        container.style.minHeight = `${tallest}px`
+      })
 
       document
         .getElementById('project-prev')

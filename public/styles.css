@@ -339,6 +339,7 @@ nav {
   align-items: center;
   gap: 2.5rem;
   padding: 2rem 0 1rem;
+  overflow-x: clip;
 }
 
 .project-stack {
@@ -387,9 +388,10 @@ nav {
 }
 
 .stack-card.is-prev:hover {
-  transform: translate(-82%, 6px) rotate(-4deg) scale(0.95);
-  opacity: 0.85;
-  border-color: var(--muted);
+  transform: translate(-104%, 4px) rotate(-3deg) scale(0.97);
+  opacity: 0.98;
+  z-index: 5;
+  border-color: var(--primary);
 }
 
 .stack-card.is-next {
@@ -399,9 +401,10 @@ nav {
 }
 
 .stack-card.is-next:hover {
-  transform: translate(-18%, 6px) rotate(4deg) scale(0.95);
-  opacity: 0.85;
-  border-color: var(--muted);
+  transform: translate(4%, 4px) rotate(3deg) scale(0.97);
+  opacity: 0.98;
+  z-index: 5;
+  border-color: var(--primary);
 }
 
 .stack-card.is-hidden {
