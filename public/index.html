@@ -590,8 +590,32 @@
       <div class="section-terminal-title">> ~/thirde/projects.log</div>
 
       <!-- DYNAMIC PROJECTS -->
-      <div class="projects-container" id="projects-container">
-        <!-- injected by JS -->
+      <div class="project-stack-wrap">
+        <div class="project-stack" id="projects-container">
+          <!-- injected by JS -->
+        </div>
+
+        <div class="project-stack-nav">
+          <button
+            type="button"
+            id="project-prev"
+            class="stack-nav-btn"
+            aria-label="Previous project"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <span class="stack-counter" id="project-counter">01 / 01</span>
+
+          <button
+            type="button"
+            id="project-next"
+            class="stack-nav-btn"
+            aria-label="Next project"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -827,29 +851,111 @@
       })
       /* Fetch Project Data */
 
+      let projectsData = []
+      let currentProjectIndex = 0
+
+      function circularDistance(index, current, length) {
+        let distance = index - current
+        if (distance > length / 2) distance -= length
+        if (distance < -length / 2) distance += length
+        return distance
+      }
+
+      function renderProjectStack() {
+        const container = document.getElementById('projects-container')
+        const counter = document.getElementById('project-counter')
+        if (!container || !projectsData.length) return
+
+        container.innerHTML = projectsData
+          .map((project, index) => {
+            const distance = circularDistance(
+              index,
+              currentProjectIndex,
+              projectsData.length,
+            )
+            let stateClass = 'is-hidden'
+            if (distance === 0) stateClass = 'is-active'
+            else if (distance === -1) stateClass = 'is-prev'
+            else if (distance === 1) stateClass = 'is-next'
+
+            const [rawIndexLabel, rawRest] = project.number.split('|')
+            const indexLabel = (rawIndexLabel || '').trim()
+            const [rawRole, rawNote] = (rawRest || '').trim().split(' - ')
+            const role = (rawRole || '').trim()
+            const note = (rawNote || '').trim()
+
+            return `
+              <div class="stack-card ${stateClass}" data-index="${index}">
+                <div class="stack-card-tags">
+                  <span class="stack-tag stack-tag-index">
+                    <button type="button" class="tag-arrow" data-dir="-1" aria-label="Previous project">&lsaquo;</button>
+                    #${indexLabel} ${role}
+                    <button type="button" class="tag-arrow" data-dir="1" aria-label="Next project">&rsaquo;</button>
+                  </span>
+                  ${note ? `<span class="stack-tag">${note}</span>` : ''}
+                </div>
+
+                <div class="stack-card-header">
+                  <img class="stack-card-icon" src="${project.image}" alt="${project.alt}">
+                  <h3 class="stack-card-title">${project.title}</h3>
+                </div>
+
+                <p class="stack-card-desc">${project.description}</p>
+
+                <a href="${project.link}" class="stack-card-cta">
+                  View Project <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            `
+          })
+          .join('')
+
+        counter.textContent = `${String(currentProjectIndex + 1).padStart(2, '0')} / ${String(projectsData.length).padStart(2, '0')}`
+
+        container.querySelectorAll('.stack-card').forEach((card) => {
+          if (card.classList.contains('is-active')) return
+          card.addEventListener('click', () => {
+            currentProjectIndex = Number(card.dataset.index)
+            renderProjectStack()
+          })
+        })
+
+        container.querySelectorAll('.tag-arrow').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            stepProject(Number(btn.dataset.dir))
+          })
+        })
+
+        requestAnimationFrame(() => {
+          const activeCard = container.querySelector('.stack-card.is-active')
+          if (activeCard) {
+            container.style.minHeight = `${activeCard.offsetHeight}px`
+          }
+        })
+      }
+
+      function stepProject(dir) {
+        currentProjectIndex =
+          (currentProjectIndex + dir + projectsData.length) %
+          projectsData.length
+        renderProjectStack()
+      }
+
+      document
+        .getElementById('project-prev')
+        .addEventListener('click', () => stepProject(-1))
+      document
+        .getElementById('project-next')
+        .addEventListener('click', () => stepProject(1))
+
       // fetch("/public/data/data.json") For Local
       fetch('/data/data.json') // For Production
         .then((res) => res.json())
         .then((projects) => {
-          const container = document.getElementById('projects-container')
-          projects.forEach((project, index) => {
-            const html = `
-                        <div class="project-card">
-                            <div class="project-number">${project.number}</div>
-                            <div class="project-content${project.portrait ? ' portrait-fit' : ''}">
-                                <div class="project-image${project.portrait ? ' portrait-fit' : ''}">
-                                    <img src="${project.image}" alt="${project.alt}">
-                                </div>
-                                <div class="project-info">
-                                    <h3 class="project-title">${project.title}</h3>
-                                    <p class="project-description">${project.description}</p>
-                                    <a href="${project.link}" class="view-project">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        `
-            container.insertAdjacentHTML('beforeend', html)
-          })
+          projectsData = projects
+          renderProjectStack()
         })
 
       const toggleButton = document.getElementById('theme-toggle')
