@@ -811,15 +811,17 @@
           setTimeout(() => {
             let delay = 0
 
-            // 🔻 Fade out and hide unmatched skills
+            // 🔻 Fade out unmatched skills, then hide once the transition finishes
             skills.forEach((skill) => {
               const category = skill.getAttribute('data-category')
               const shouldShow = filter === 'all' || category === filter
 
               if (!shouldShow) {
-                skill.style.display = 'none'
                 skill.classList.remove('fade-in')
                 skill.classList.add('fade-out')
+                setTimeout(() => {
+                  skill.style.display = 'none'
+                }, 250)
               }
             })
 
@@ -832,12 +834,11 @@
                 setTimeout(() => {
                   skill.style.display = 'flex'
                   skill.classList.remove('fade-out')
+                  skill.classList.remove('fade-in')
+                  void skill.offsetWidth // force reflow, restarts the keyframe
                   skill.classList.add('fade-in')
-                  void skill.offsetWidth // force reflow
-                  skill.style.opacity = '1'
-                  skill.style.transform = 'scale(1)'
                 }, delay + 50)
-                delay += 75
+                delay += 60
               }
             })
 
